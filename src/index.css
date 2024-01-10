@@ -1,0 +1,17 @@
+@import "keep-react/css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1,
+h2, a {
+    font-family: 'Urbanist', sans-serif;
+}
+h3,
+h4,
+h5,
+h6,
+p,
+span,table, ::-webkit-input-placeholder, li  {
+    font-family: 'DM Sans', sans-serif;
+}
