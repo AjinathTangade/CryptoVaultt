@@ -1,9 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+// import ScrollAnimation from "react-animate-on-scroll";
+import { ScrollEffect } from 'react-easy-scroll-effect';
+import 'react-easy-scroll-effect/dist/index.css';
 function ChooseUs() {
   return (
     <div className="bg-[#07252a] pt-4 pb-20 z-0 px-5 ">
+      <ScrollEffect offset={100} duration={1} animateOut={true}>
       <div className="max-w-screen-xl mx-auto">
+      {/* <ScrollAnimation animateIn="fadeIn" delay={100}> */}
         <div className="flex flex-col-reverse md:grid md:grid-cols-2 gap-10">
           <div className="lg:pt-14 lg:pt-0">
             <div>
@@ -132,7 +137,9 @@ function ChooseUs() {
             </div>
           </div>
         </div>
+        {/* </ScrollAnimation> */}
       </div>
+      </ScrollEffect>
     </div>
   );
 }

@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { ScrollEffect } from 'react-easy-scroll-effect';
+import 'react-easy-scroll-effect/dist/index.css';
 function StartTrading() {
   return (
     <div
@@ -8,6 +10,7 @@ function StartTrading() {
       }}
       className="p-5 py-20 bg-no-repeat bg-cover"
     >
+      <ScrollEffect offset={200} duration={2} animateOut={true}>
       <div className="max-w-screen-xl mx-auto flex flex-col justify-center items-center">
         <h2 className="text-white text-3xl font-bold lg:leading-tight lg:text-4xl text-center">
           Start Trading on Crypto Wallet
@@ -25,6 +28,7 @@ function StartTrading() {
             </Link>
     
       </div>
+      </ScrollEffect>
     </div>
   );
 }

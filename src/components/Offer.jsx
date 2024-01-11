@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { ScrollEffect } from 'react-easy-scroll-effect';
+import 'react-easy-scroll-effect/dist/index.css';
 function Offer() {
   const [count, setCount] = useState(0);
 
@@ -10,13 +12,16 @@ function Offer() {
     return () => clearInterval(intervalId);
   }, []);
   return (
+ 
     <div
       className="bg-no-repeat bg-cover bg-[#07252a]"
       style={{
         backgroundImage: "url(/off-bg.png)",
       }}
     >
+        {/* <ScrollEffect offset={100} duration={1} animateOut={true}> */}
       <div className="max-w-screen-xl mx-auto py-20 px-5">
+      
         <div className="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-10">
           <div className="flex flex-col">
             <h2 className="text-white text-3xl font-bold lg:leading-tight lg:text-5xl">
@@ -60,8 +65,11 @@ function Offer() {
             />
           </div>
         </div>
+        
       </div>
+      {/* </ScrollEffect> */}
     </div>
+   
   );
 }
 

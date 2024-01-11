@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import ScrollAnimation from "react-animate-on-scroll";
+// import ScrollAnimation from "react-animate-on-scroll";
+import { ScrollEffect } from 'react-easy-scroll-effect';
+import 'react-easy-scroll-effect/dist/index.css';
 export const feature = [
   {
     id: 1,
@@ -30,10 +32,14 @@ export const feature = [
 
 function Feature() {
   return (
+    
     <div className="p-5 bg-[#07252a] pt-56 pb-14 lg:pt-44 lg:pb-20 z-0">
+      <ScrollEffect offset={100} duration={1} animateOut={true}>
       <div className="max-w-screen-xl mx-auto lg:flex gap-10 justify-between">
+      
         <div>
-          <ScrollAnimation animateIn="fadeIn">
+          {/* <ScrollAnimation animateIn="fadeIn"> */}
+          
             <div className="grid grid-cols-2 gap-4">
               {feature.map((feature) => (
                 <div
@@ -54,7 +60,7 @@ function Feature() {
                 </div>
               ))}
             </div>
-          </ScrollAnimation>
+          {/* </ScrollAnimation> */}
         </div>
         <div className="pt-14 lg:pt-0">
           <div>
@@ -83,8 +89,11 @@ function Feature() {
             </Link>
           </div>
         </div>
-      </div>
+       
+      </div> 
+      </ScrollEffect>
     </div>
+    
   );
 }
 

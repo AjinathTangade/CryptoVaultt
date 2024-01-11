@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCirclePlay } from "@fortawesome/free-solid-svg-icons";
 import LogoSlider from "./LogoSlider";
+// import { ScrollEffect } from "react-easy-scroll-effect";
+// import "react-easy-scroll-effect/dist/index.css";
 function Cta() {
   return (
     <div className="relative z-10">
@@ -13,16 +15,19 @@ function Cta() {
                 <div className="relative">
                   <div className="bg-[url('./bit1.png')] bg-no-repeat bg-local h-14 w-14 absolute left-[-140px] top-[115px] animate-[wiggle_1s_ease-in-out_infinite]"></div>
                   <div className="bg-[url('./bit3.png')] bg-no-repeat bg-local h-14 w-14 animate-bounce opacity-30"></div>
+
                   <h1 className="font-extrabold text-5xl lg:text-7xl text-white leading-tight">
                     Trusted & Secure Trading{" "}
                     <span className="text-teal-400">Crypto</span> Wallet
                   </h1>
-                  <div className="relative bottom-6 lg:left-60 hidden lg:block">
-                    <div className="w-28 border-2 border-teal-400 bottom-10 "></div>{" "}
-                    <div className="w-2 h-2 rounded-full border-2 border-teal-400 absolute lg:bottom-0 lg:left-32">
-                      <span className="w-1 h-1 rounded-full border-2 border-teal-400 absolute lg:bottom-0 "></span>
+                  {/* <ScrollEffect offset={100} duration={1} animateOut={true}> */}
+                    <div className="relative bottom-6 lg:left-60 hidden lg:block">
+                      <div className="w-28 border-2 border-teal-400 bottom-10 "></div>{" "}
+                      <div className="w-2 h-2 rounded-full border-2 border-teal-400 absolute lg:bottom-0 lg:left-32">
+                        <span className="w-1 h-1 rounded-full border-2 border-teal-400 absolute lg:bottom-0 "></span>
+                      </div>
                     </div>
-                  </div>
+                  {/* </ScrollEffect> */}
                   <div className="my-6">
                     <p className="text-white">
                       You might wonder why a designer would choose to use Morem

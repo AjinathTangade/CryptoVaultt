@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import ScrollAnimation from "react-animate-on-scroll";
+import { ScrollEffect } from 'react-easy-scroll-effect';
+import 'react-easy-scroll-effect/dist/index.css';
 import {
   faCaretDown,
   faCaretUp,
@@ -91,7 +92,8 @@ export const cryptolive = [
 
 function LivePrice() {
   return (
-    <div className="bg-[#07252a] bg-no-repeat bg-local w-full pb-14 lg:pt-16 lg:pb-20">
+    <div className="bg-[#07252a] bg-no-repeat bg-local w-full pb-14 lg:pt-8 lg:pb-20">
+      <ScrollEffect offset={100} duration={1} animateOut={true}>
       <div className="p-5 max-w-screen-xl mx-auto">
         <h3 className="text-lg text-center text-teal-400 font-bold pb-3 flex justify-center items-center gap-5">
           <FontAwesomeIcon icon={faArrowRightLong} className="text-2xl" /> Live
@@ -107,7 +109,8 @@ function LivePrice() {
           the people reviewing it to get distracted.
         </p>
         <div className="pt-10 lg:pt-20 pb-6">
-        <ScrollAnimation animateIn="fadeIn" delay={500}>
+        {/* <ScrollAnimation animateIn="fadeIn" delay={50}> */}
+        
           <div className="flex overflow-x-auto xl:grid grid-cols-3 gap-4 pb-10">
             {cryptolive.map((cryptolive) => (
               <div
@@ -180,9 +183,10 @@ function LivePrice() {
               </div>
             ))}
           </div>
-          </ScrollAnimation>
+          
+          {/* </ScrollAnimation> */}
         </div>
-        <div className="flex justify-center ">
+        <div className="flex justify-center">
           <Link
             to="/"
             className="px-5 py-3 md:px-10 md:py-4 rounded-full text-white font-semibold bg-amber-500 hover:bg-teal-400"
@@ -191,6 +195,7 @@ function LivePrice() {
           </Link>
         </div>
       </div>
+      </ScrollEffect>
     </div>
   );
 }

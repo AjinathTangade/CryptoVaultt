@@ -1,4 +1,6 @@
 import React from "react";
+import { ScrollEffect } from 'react-easy-scroll-effect';
+import 'react-easy-scroll-effect/dist/index.css';
 
 export const team = [
   {
@@ -48,6 +50,7 @@ export const team = [
 function Team() {
   return (
     <div className="p-5 bg-[#07252a] pb-20 z-0">
+      <ScrollEffect offset={200} duration={2} animateOut={true}>
       <div className="max-w-screen-xl mx-auto">
         <div>
           <div>
@@ -83,6 +86,7 @@ function Team() {
           </div>
         </div>
       </div>
+      </ScrollEffect>
     </div>
   );
 }

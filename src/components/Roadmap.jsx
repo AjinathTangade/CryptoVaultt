@@ -1,5 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { ScrollEffect } from 'react-easy-scroll-effect';
+import 'react-easy-scroll-effect/dist/index.css';
 import {
   faArrowLeftLong,
   faArrowRightLong,
@@ -8,6 +10,7 @@ function Roadmap() {
   return (
     <div>
       <div className="bg-[#07252a] bg-no-repeat bg-local w-full pt-20">
+      <ScrollEffect offset={100} duration={1} animateOut={true}>
         <div className="p-5 max-w-screen-xl mx-auto">
           <div>
             <h3 className="text-lg text-center text-teal-400 font-bold pb-3 flex justify-center items-center gap-5">
@@ -19,7 +22,9 @@ function Roadmap() {
               The timeline of our Business
             </h2>
           </div>
+          
           <div className="grid lg:grid-cols-3 py-10">
+          
             <div className="col-span-1">
               <div className=" lg:flex lg:flex-col gap-14 ">
                 <div></div>
@@ -74,11 +79,14 @@ function Roadmap() {
                 </div>
               </div>
             </div>
+          
             <div className="hidden lg:block col-span-1">
               <div className="flex justify-center items-center">
                 <img src="/line.png" alt="roadmap-img" />
               </div>
             </div>
+            <ScrollEffect offset={200} duration={2} animateOut={true}>
+
             <div className="col-span-1">
               <div className="relative">
                 <div className=" flex flex-col lg:gap-20">
@@ -125,8 +133,11 @@ function Roadmap() {
                 </div>
               </div>
             </div>
+            </ScrollEffect>
           </div>
+         
         </div>
+        </ScrollEffect>
       </div>
     </div>
   );

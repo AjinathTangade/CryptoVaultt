@@ -1,5 +1,6 @@
 import React from "react";
-
+import { ScrollEffect } from 'react-easy-scroll-effect';
+import 'react-easy-scroll-effect/dist/index.css';
 function Trade() {
   return (
     <div className="p-5 bg-[#07252a] pb-20">
@@ -10,6 +11,7 @@ function Trade() {
           }}
           className="bg-no-repeat bg-cover lg:h-[500px] px-4 py-10 lg:p-20"
         >
+          <ScrollEffect offset={200} duration={2} animateOut={true}>
           <div className=" flex flex-col flex-col-reverse lg:flex-row justify-between gap-10">
             <div className="w-full lg:w-1/2 ">
               <h2 className="text-white text-3xl font-bold lg:leading-tight lg:text-5xl">
@@ -62,6 +64,7 @@ function Trade() {
               />
             </div>
           </div>
+          </ScrollEffect>
         </div>
       </div>
     </div>
