@@ -92,7 +92,7 @@ export const cryptolive = [
 
 function LivePrice() {
   return (
-    <div className="bg-[#07252a] bg-no-repeat bg-local w-full pb-14 lg:pt-8 lg:pb-20">
+    <div className="bg-[#07252a] bg-no-repeat bg-local w-full pb-14 lg:pt-8 lg:pb-20" id="liveprice">
       <ScrollEffect offset={100} duration={1} animateOut={true}>
       <div className="p-5 max-w-screen-xl mx-auto">
         <h3 className="text-lg text-center text-teal-400 font-bold pb-3 flex justify-center items-center gap-5">

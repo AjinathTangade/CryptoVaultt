@@ -8,7 +8,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 function Roadmap() {
   return (
-    <div>
+    <div id="roadmap">
       <div className="bg-[#07252a] bg-no-repeat bg-local w-full pt-20">
       <ScrollEffect offset={100} duration={1} animateOut={true}>
         <div className="p-5 max-w-screen-xl mx-auto">

@@ -1,18 +1,27 @@
 import React from "react";
-import { Navbar, Button } from "keep-react";
+import { Navbar } from "keep-react";
 import { Link } from "react-router-dom";
+
 export const navigation = [
-  { name: "Home", href: "/", current: true },
-  { name: "Live Price", href: "/aboutus", current: false },
-  { name: "Road Map", href: "/contact", current: false },
-  { name: "Testimonial", href: "/help", current: false },
-  { name: "Team", href: "/terms", current: false },
-  { name: "Blog", href: "/terms", current: false },
+  { name: "Home", href: "#home", current: true },
+  { name: "Live Price", href: "#liveprice", current: false },
+  { name: "Road Map", href: "#roadmap", current: false },
+  { name: "Testimonial", href: "#testimonial", current: false },
+  { name: "Team", href: "#team", current: false },
+  { name: "Blog", href: "#blog", current: false },
 ];
+
 function Header() {
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <div className="bg-[#022B36]">
-      <div className="container max-w-screen-xl mx-auto mx-auto lg:py-4">
+    <div className="bg-[#022B36] fixed top-0 z-20 w-full">
+      <div className="container max-w-screen-xl mx-auto lg:py-4">
         <Navbar fluid={true} className="bg-[#022B36] py-3 px-0">
           <Navbar.Container className="flex items-center justify-between">
             <Navbar.Container className="flex px-0">
@@ -25,39 +34,37 @@ function Header() {
               className="lg:flex hidden items-center justify-between gap-12"
             >
               {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  className={`${item.current}
-                      ? "font-bold  text-lg text-amber-500"
-                      : "font-bold text-white text-lg"
-                  }rounded-md text-base font-medium hover:text-amber-500 ${
-                    // Display as block on medium screens and flex on large screens
-                    "md:inline-block lg:flex"
-                  }`}
-                  aria-current={item.current ? "page" : undefined}
-                >
-                  {item.name}
-                </Link>
+                <li key={item.name}>
+                  <button
+                    onClick={() => scrollToSection(item.href.substring(1))}
+                    className={`font-bold text-lg ${
+                      item.current
+                        ? "text-amber-500"
+                        : "text-white"
+                    } rounded-md text-base font-medium hover:text-amber-500`}
+                    aria-current={item.current ? "page" : undefined}
+                  >
+                    {item.name}
+                  </button>
+                </li>
               ))}
             </Navbar.Container>
             <Navbar.Collapse collapseType="sidebar">
               <Navbar.Container tag="ul" className="flex flex-col gap-5">
                 {navigation.map((item) => (
-                  <Link
-                    key={item.name}
-                    to={item.href}
-                    className={`${item.current}
-                          ? "font-bold  text-lg text-amber-500"
-                          : "font-bold  text-lg"
-                      }rounded-md text-base font-medium hover:text-amber-500 ${
-                        // Display as block on medium screens and flex on large screens
-                        "md:inline-block lg:flex"
-                      }`}
-                    aria-current={item.current ? "page" : undefined}
-                  >
-                    {item.name}
-                  </Link>
+                  <li key={item.name}>
+                    <button
+                      onClick={() => scrollToSection(item.href.substring(1))}
+                      className={`font-bold text-lg ${
+                        item.current
+                          ? "text-amber-500"
+                          : "text-white"
+                      } rounded-md text-base font-medium hover:text-amber-500`}
+                      aria-current={item.current ? "page" : undefined}
+                    >
+                      {item.name}
+                    </button>
+                  </li>
                 ))}
               </Navbar.Container>
             </Navbar.Collapse>

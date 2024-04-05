@@ -4,6 +4,7 @@ import { ScrollEffect } from "react-easy-scroll-effect";
 import "react-easy-scroll-effect/dist/index.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
 const blogPosts = [
   {
     title: "Coinbase Releases Investor Resources in 2021",
@@ -51,6 +52,7 @@ const blogPosts = [
     blogDate: "February 19, 22",
   },
 ];
+
 function Blog() {
   const settings = {
     dots: true,
@@ -83,7 +85,7 @@ function Blog() {
   };
 
   return (
-    <div className="p-5 bg-[#07252a] pt-16 pb-20 xl:pt-0">
+    <div className="p-5 bg-[#07252a] pt-16 pb-20 xl:pt-0" id="blog">
       <ScrollEffect offset={200} duration={2} animateOut={true}>
         <div className="max-w-screen-xl mx-auto">
           <div>
@@ -96,19 +98,16 @@ function Blog() {
             </p>
           </div>
           <div className="mt-14">
-            {" "}
-            {/* Adjust the padding based on your design */}
             <Slider {...settings}>
               {blogPosts.map((post, index) => (
                 <div
                   key={index}
                   className="mx-2 px-3 overflow-hidden hover:shadow-lg transition-all"
                 >
-                  {/* Add transition-all for a smooth transition */}
                   <div className="overflow-hidden transition-transform transform hover:scale-100">
                     <img
                       src={post.image}
-                      alt={post.title}
+                      alt={`Blog Post Image ${index + 1}`}
                       className="w-full h-64 object-cover transition-transform transform hover:scale-105"
                     />
                     <div className="pt-5 pb-4">
@@ -121,7 +120,7 @@ function Blog() {
                     </div>
                     <div className="flex gap-6 items-center ">
                       <div>
-                        <img src={post.authorImage} alt={post.image} />
+                        <img src={post.authorImage} alt="Author" />
                       </div>
                       <div>
                         <h4 className="font-semibold text-lg text-white">

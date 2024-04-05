@@ -49,7 +49,7 @@ export const team = [
 
 function Team() {
   return (
-    <div className="p-5 bg-[#07252a] pb-20 z-0">
+    <div className="p-5 bg-[#07252a] pb-20 z-0" id="team">
       <ScrollEffect offset={200} duration={2} animateOut={true}>
       <div className="max-w-screen-xl mx-auto">
         <div>

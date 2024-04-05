@@ -6,8 +6,13 @@ import LogoSlider from "./LogoSlider";
 // import "react-easy-scroll-effect/dist/index.css";
 function Cta() {
   return (
-    <div className="relative z-10">
-      <div className="bg-[url('./banner.png')] bg-no-repeat bg-local w-full relative">
+    <div className="relative z-10" id="home">
+      <div
+        className=" bg-no-repeat bg-local w-full relative "
+        style={{
+          backgroundImage: "url(/banner.png)",
+        }}
+      >
         <div className="max-w-screen-xl mx-auto">
           <div className=" p-10 md:pl-10 py-20 lg:py-0">
             <div className="block lg:flex justify-items-center gap-4 items-center lg:h-[750px]">
@@ -21,12 +26,12 @@ function Cta() {
                     <span className="text-teal-400">Crypto</span> Wallet
                   </h1>
                   {/* <ScrollEffect offset={100} duration={1} animateOut={true}> */}
-                    <div className="relative bottom-6 lg:left-60 hidden lg:block">
-                      <div className="w-28 border-2 border-teal-400 bottom-10 "></div>{" "}
-                      <div className="w-2 h-2 rounded-full border-2 border-teal-400 absolute lg:bottom-0 lg:left-32">
-                        <span className="w-1 h-1 rounded-full border-2 border-teal-400 absolute lg:bottom-0 "></span>
-                      </div>
+                  <div className="relative bottom-6 lg:left-60 hidden lg:block">
+                    <div className="w-28 border-2 border-teal-400 bottom-10 "></div>{" "}
+                    <div className="w-2 h-2 rounded-full border-2 border-teal-400 absolute lg:bottom-0 lg:left-32">
+                      <span className="w-1 h-1 rounded-full border-2 border-teal-400 absolute lg:bottom-0 "></span>
                     </div>
+                  </div>
                   {/* </ScrollEffect> */}
                   <div className="my-6">
                     <p className="text-white">
