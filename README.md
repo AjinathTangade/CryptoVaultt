@@ -1,3 +1,8 @@
+![image](https://github.com/AjinathTangade/CryptoVaultt/assets/93082482/15d20dd4-3fac-461a-bfbe-104d95df2161)
+
+
+
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
