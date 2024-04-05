@@ -39,8 +39,8 @@ function Header() {
                     onClick={() => scrollToSection(item.href.substring(1))}
                     className={`font-bold text-lg ${
                       item.current
-                        ? "text-amber-500"
-                        : "text-white"
+                        ? "text-teal-400"
+                        : "text-teal-400"
                     } rounded-md text-base font-medium hover:text-amber-500`}
                     aria-current={item.current ? "page" : undefined}
                   >
@@ -57,8 +57,8 @@ function Header() {
                       onClick={() => scrollToSection(item.href.substring(1))}
                       className={`font-bold text-lg ${
                         item.current
-                          ? "text-amber-500"
-                          : "text-white"
+                          ? "text-teal-500"
+                          : "text-teal-500"
                       } rounded-md text-base font-medium hover:text-amber-500`}
                       aria-current={item.current ? "page" : undefined}
                     >
@@ -68,7 +68,7 @@ function Header() {
                 ))}
               </Navbar.Container>
             </Navbar.Collapse>
-            <Navbar.Toggle className="block lg:hidden stroke-white-800 ml-5 border-2 border-white-800 p-2 rounded fill-red-700" />
+            <Navbar.Toggle className="block lg:hidden stroke-white-800 ml-5 border-2 border-white-800 p-2 rounded fill-red-700 bg-teal-500" />
           </Navbar.Container>
         </Navbar>
       </div>
